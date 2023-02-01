@@ -62,20 +62,20 @@ const showData = (data) => {
 };
 
 const putData = async (newData) => {
-  const respone = await fetch("http://localhost:5500/users", {
+  const respone = await fetch("https://node-crud-jet.vercel.app/users", {
     method: "PUT",
     body: JSON.stringify(newData),
   });
 };
 const deleteData = async (toDelete) => {
-  const respone = await fetch("http://localhost:5500/users", {
+  const respone = await fetch("https://node-crud-jet.vercel.app/users", {
     method: "DELETE",
     body: JSON.stringify(toDelete),
   });
 };
 
 const getData = async () => {
-  const respone = await fetch("http://localhost:5500/users");
+  const respone = await fetch("https://node-crud-jet.vercel.app/users");
   const data = await respone.json();
   showData(data);
 };
@@ -86,7 +86,7 @@ const postData = async () => {
     email: emailTag.value,
     password: passwordTag.value,
   };
-  const respone = await fetch("http://localhost:5500/users");
+  const respone = await fetch("https://node-crud-jet.vercel.app/users");
   const data = await respone.json();
   const hasEmail = data.find((item) => item.email === inputData.email);
 
@@ -94,7 +94,7 @@ const postData = async () => {
     alert("email is already exist! try again");
     return;
   }
-  const post = await fetch("http://localhost:5500/users", {
+  const post = await fetch("https://node-crud-jet.vercel.app/users", {
     method: "POST",
     body: JSON.stringify(inputData),
   });
