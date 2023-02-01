@@ -1,0 +1,78 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: aqua;
+}
+
+.container {
+  max-width: 600px;
+  margin: 50px auto;
+}
+
+.container form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.container form div {
+  width: 100%;
+}
+
+.userContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.user {
+  width: 100%;
+  padding: 10px;
+  margin: 5px 0;
+  background-color: rgb(82, 94, 255);
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.user input {
+  border: none;
+  background-color: aquamarine;
+  width: 150px;
+  padding: 5px;
+  color: black;
+  border-radius: 5px;
+  outline: none;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.user input[type="email"] {
+  width: 200px;
+}
+
+.user i {
+  font-size: 20px;
+}
+
+.fa-trash-can {
+  color: rgb(148, 0, 0);
+}
+
+.fa-pen-to-square,
+.fa-floppy-disk {
+  display: none;
+  color: rgb(5, 80, 5);
+}
+
+.active {
+  display: inline;
+}
